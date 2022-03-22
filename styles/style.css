@@ -9,15 +9,6 @@
   outline: none;
   border: none;
 }
-
-/* - Cyan: hsl(179, 62%, 43%)
-- Bright Yellow: hsl(71, 73%, 54%)
-
-### Neutral
-
-- Light Gray: hsl(204, 43%, 93%)
-- Grayish Blue: hsl(218, 22%, 67%) */
-
 :root {
   --font-family: 'Karla', sans-serif;
   --clr-cyan: hsl(179, 62%, 43%);
@@ -32,6 +23,12 @@ html {
 
 body {
   font-family: var(--font-family);
+  background-color: var(--clr-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 a {
@@ -40,4 +37,111 @@ a {
 
 li {
   list-style: none;
+}
+
+.main {
+  background-color: #fff;
+  height: auto;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.top__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-cyan);
+}
+
+.top__subheading {
+  font-size: 1.2rem;
+  color: var(--clr-bright-yellow);
+  font-weight: 700;
+}
+
+.top__description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--clr-grayish-blue);
+}
+
+.bottom {
+  color: var(--clr-light-gray);
+}
+
+.bottom__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--clr-cyan);
+  padding: 1.5rem 2rem;
+}
+
+.bottom__price-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.bottom__price-content {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.bottom__price-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.bottom__price-month {
+  opacity: 0.8;
+}
+
+.bottom__price-description {
+  font-size: 1.1rem;
+}
+
+.bottom__price-button {
+  padding: 1.25rem;
+  background-color: var(--clr-bright-yellow);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.bottom__why {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #4abebd;
+  padding: 2rem;
+}
+
+.bottom__why-list {
+  font-size: 0.875em;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    width: 35%;
+  }
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
