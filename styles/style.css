@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr-cyan: #2ab2af;
+  --clr-yellow: #c0df34;
+  --clr-light-gray: #e5eff5;
+  --clr-gray-blue: #98a6bd;
+}
+
 html {
   font-size: 16px;
 }
